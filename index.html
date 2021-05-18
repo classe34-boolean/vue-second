@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <title>Vue, second live coding</title>
+    </head>
+    <body>
+        <div id="root">
+            <h1>{{ message }}</h1>
+
+            <!-- <p v-if="condition">Testo con v-if</p>
+            <strong v-else-if="condition2">Prima condizione falsa, seconda vera</strong>
+            <h2 v-else>Entrambe le condizioni sono false</h2>
+
+            <h2 v-if="getRandom()">Testo con v-if e funzione</h2>    
+            <h3 v-if="(Math.random() >= 0.5) ? true : false">Testo con condizione inline</h3>
+
+            <h4 v-show="getRandom()">Esempio di v-show</h4> -->
+
+            <!-- <img :src="img.url" :alt="img.alt"> -->
+
+            <template v-if="condition">
+                <h1>Titolo principale</h1>
+                <h2>TItolo secondario</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sapiente expedita quasi neque quod. Deserunt eum id, harum suscipit, nulla doloribus, sunt ipsam tempora tenetur ipsum atque velit dolores deleniti.</p>
+            </template>
+
+            <ul>
+                <li v-for="(name, index) in names">{{ index }} {{ name }}</li>
+            </ul>
+
+            <ol>
+                <li v-for="studente in studenti">{{ studente.nome }} {{ studente.cognome }}</li>
+            </ol>
+
+            <ul>
+                <li v-for="number in 100">{{ number }}</li>
+            </ul>
+
+            <div>
+                <p v-for="(valore, chiave) in docente">
+                    {{ chiave }} - {{ valore }}
+                </p>
+            </div>
+            
+        </div>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>
